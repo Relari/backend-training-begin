@@ -57,7 +57,7 @@ public class TypeReactive {
 //        completable().subscribe();
 //        completableError().subscribe();
 //        studentCompletableToSingle(StudentRepository.student01()).subscribe();
-        studentObservable3().subscribe();
+//        studentObservable3().subscribe();
 
     }
 
