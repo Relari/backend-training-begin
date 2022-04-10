@@ -19,7 +19,7 @@ public class Mutable {
         log.info(student.toString());
 
         var student2 = student.mutate()
-                .studentCode(StudentUtil.buildStudentCode(studentId))
+                .studentCode(StudentUtil.buildStudentCode(student.getId()))
                 .status(false)
                 .build();
 

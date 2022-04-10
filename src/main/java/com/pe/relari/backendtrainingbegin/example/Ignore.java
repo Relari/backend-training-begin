@@ -20,14 +20,14 @@ public class Ignore {
         return Observable.fromIterable(StudentRepository.students())
                 .doOnNext(student -> log.info(student.toString()))
                 .ignoreElements()
-                .doOnComplete(() -> log.info("Complete"));
+                .doOnComplete(() -> log.info("Complete Observable"));
     }
 
     private static Completable completable2() {
         return Single.just(StudentRepository.student01())
                 .doOnSuccess(student -> log.info(student.toString()))
                 .ignoreElement()
-                .doOnComplete(() -> log.info("Complete"));
+                .doOnComplete(() -> log.info("Complete Single"));
     }
 
 }
